@@ -4,9 +4,9 @@ use std::io::BufReader;
 
 // mod d1;
 // mod d2;
-mod d3;
+// mod d3;
+mod d4;
 pub mod intcode;
-pub mod math;
 
 
 fn get_input(day: u8, suffix: &str) -> Vec<String> {
@@ -19,5 +19,6 @@ fn get_input(day: u8, suffix: &str) -> Vec<String> {
 fn main() {
     // d1::run();
     // d2::run();
-    d3::run();
+    // d3::run();
+    d4::run();
 }
