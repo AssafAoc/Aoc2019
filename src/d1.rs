@@ -12,6 +12,7 @@ fn calc_fuel_fuel(fuel: u32) -> u32 {
     total_fuel
 }
 
+#[allow(dead_code)]
 pub fn run() {
     let input = super::get_input(1, "");
 

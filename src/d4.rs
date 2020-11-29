@@ -7,10 +7,10 @@ struct DigitIterator {
 }
 
 impl DigitIterator {
-    fn new(number: u32/*NonZeroU32*/) -> Self {
-        let power = (number as f32).log10().ceil() as u32;
+    fn new(number: NonZeroU32) -> Self {
+        let power = (number.get() as f32).log10().ceil() as u32;
 
-        DigitIterator { number, power, at_digit: 0 }
+        DigitIterator { number: number.get(), power, at_digit: 0 }
     }
 }
 
@@ -28,6 +28,7 @@ impl Iterator for DigitIterator {
     }
 }
 
+#[allow(dead_code)]
 pub fn run() {
     fn always_increase(digits: &[u8]) -> bool {
         digits.windows(2).fold(true, |is_increasing, pair| is_increasing && pair[0] <= pair[1])
@@ -47,7 +48,7 @@ pub fn run() {
     let mut good_passwords_b = 0;
 
     for i in range {
-        let digits: Vec<u8> = DigitIterator::new(i).collect::<Vec<_>>();
+        let digits: Vec<u8> = DigitIterator::new(NonZeroU32::new(i).unwrap()).collect::<Vec<_>>();
 
         if always_increase(&digits) && double_found(&digits) {
             good_passwords_a += 1;

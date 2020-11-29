@@ -1,7 +1,5 @@
-use std::collections::{HashMap, HashSet};
-use std::ops::Add;
-
-use crate::math::manhattan_distance;
+use std::collections::HashMap;
+use std::collections::HashSet;
 
 fn a(input: &[String]) -> u32 {
     let mut visited = HashSet::new();
@@ -122,22 +120,9 @@ fn b(input: &[String]) -> u32 {
     *total_steps_to_collision.iter().min().unwrap()
 }
 
+#[allow(dead_code)]
 pub fn run() {
     let input = super::get_input(3, "");
-
-    // let mut paths = input.iter().map(|path|
-    //     path.split(',').map(|s| {
-    //         let mut chars = s.chars();
-    //         let direction = chars.next().unwrap();
-    //         let size = chars.as_str().parse::<i32>().unwrap();
-    //         match direction {
-    //             'U' => (0, size),
-    //             'D' => (0, -size),
-    //             'L' => (-size, 0),
-    //             'R' => (size, 0),
-    //             _ => panic!(format!("unknown direction: {}", direction))
-    //         }
-    //     }).collect::<Vec<_>>());
 
     println!("a: {}", a(&input));
     println!("b: {}", b(&input));

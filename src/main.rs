@@ -2,10 +2,11 @@ use std::fs::File;
 use std::io::BufRead;
 use std::io::BufReader;
 
-// mod d1;
-// mod d2;
-// mod d3;
+mod d1;
+mod d2;
+mod d3;
 mod d4;
+mod d5;
 pub mod intcode;
 
 
@@ -20,5 +21,6 @@ fn main() {
     // d1::run();
     // d2::run();
     // d3::run();
-    d4::run();
+    // d4::run();
+    d5::run();
 }
