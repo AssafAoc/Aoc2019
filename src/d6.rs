@@ -1,5 +1,6 @@
 use std::collections::{HashMap, VecDeque};
 
+#[allow(dead_code)]
 pub fn run() {
     let input = super::get_input(6, "");
     // let input = super::get_input(6, "test");

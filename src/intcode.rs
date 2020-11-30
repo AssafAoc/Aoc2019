@@ -100,7 +100,7 @@ pub fn run(mut ribbon: Vec<i32>, input: Option<Vec<i32>>) -> RibbonAndOutput {
     let mut output = Vec::new();
     let input = input.unwrap_or(Vec::new());
 
-    let mut it = input.into_iter().rev();
+    let mut it = input.into_iter();
 
     while let Some(new_position) = operate(&mut ribbon, position, &mut it, &mut output) {
         position = new_position;

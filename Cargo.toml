@@ -4,4 +4,8 @@ version = "0.1.0"
 authors = ["Assaf"]
 edition = "2018"
 
+[features]
+day7 = ["permutohedron"]
+
 [dependencies]
+permutohedron = { version = "0.2.4", optional = true }

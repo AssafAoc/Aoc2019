@@ -8,6 +8,9 @@ mod d3;
 mod d4;
 mod d5;
 mod d6;
+#[cfg(feature = "day7")]
+mod d7;
+mod d8;
 pub mod intcode;
 
 
@@ -24,5 +27,8 @@ fn main() {
     // d3::run();
     // d4::run();
     // d5::run();
-    d6::run();
+    // d6::run();
+    #[cfg(feature = "day7")]
+    // d7::run();
+    d8::run();
 }
